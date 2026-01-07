@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f2f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+.roadmap-wrapper {
+  max-width: 1200px; /* Otimizado para telas de 1280px */
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.roadmap-header {
+  background-color: #1342a7;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.roadmap-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.roadmap-header p {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.timeline {
+  padding: 40px 60px; /* Ajustado após retirar a linha lateral */
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Linha vertical - Background removido conforme solicitado */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 65px;
+  top: 0;
+  bottom: 0;
+  width: 0; /* Retirada a largura */
+  background-color: transparent; /* Retirada a cor */
+  z-index: -1;
+}
+
+/* Cartão de Cada Fase */
+.phase-card {
+  position: relative;
+  background-color: #fcfcfc;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+.phase-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.phase-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Círculos removidos conforme solicitado */
+.phase-title::before {
+  display: none;
+}
+
+.phase-icon {
+  background-color: #002575;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.phase-title h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+  flex-grow: 1;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #002575;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.phase-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.4s ease-out;
+  opacity: 0;
+}
+
+.phase-card.expanded .toggle-button .fas {
+  transform: rotate(180deg);
+}
+
+.phase-card.expanded .phase-content {
+  max-height: 2000px; /* Aumentado para comportar os novos textos */
+  opacity: 1;
+}
+
+.topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+/* Estilo para os itens da lista com Título e Descrição */
+.topic-list li {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-left: 5px solid #1342a7; /* Cor tema na lateral do item */
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* Título em cima, descrição embaixo */
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.topic-list li:hover {
+  background-color: #fff9fe;
+  border-color: #1342a7;
+}
+
+/* Estilo para o Texto Interno (Título do Tópico) */
+.topic-list li strong {
+  color: #1342a7;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* Estilo para o Texto Interno (Descrição do Tópico) */
+.topic-list li span {
+  font-size: 0.85em;
+  color: #666;
+  line-height: 1.4;
+}
+
+.phase-footer {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.challenge-badge {
+  background: #ffffff;
+  color: #1342a7;
+  border: 1px solid #1342a7;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.8em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .roadmap-wrapper {
+    margin: 20px;
+    border-radius: 15px;
+  }
+
+  .timeline {
+    padding: 20px;
+  }
+
+  .topic-list {
+    grid-template-columns: 1fr;
+  }
+}
