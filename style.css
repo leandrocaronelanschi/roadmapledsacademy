@@ -31,7 +31,7 @@ body {
 }
 
 .roadmap-header {
-  background-color: #1342a7;
+  background-color: #032a7c;
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -102,7 +102,7 @@ body {
 }
 
 .phase-icon {
-  background-color: #002575;
+  background-color: #032a7c;
   color: white;
   width: 45px;
   height: 45px;
@@ -125,7 +125,7 @@ body {
 .toggle-button {
   background: none;
   border: none;
-  color: #002575;
+  color: #032a7c;
   font-size: 1.2em;
   cursor: pointer;
   transition: transform 0.3s ease;
