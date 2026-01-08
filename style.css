@@ -49,7 +49,7 @@ body {
 }
 
 .timeline {
-  padding: 40px 60px; /* Ajustado após retirar a linha lateral */
+  padding: 40px 60px;
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -57,7 +57,7 @@ body {
   z-index: 1;
 }
 
-/* Linha vertical - Background removido conforme solicitado */
+/* Linha vertical - Background removida*/
 .timeline::before {
   content: "";
   position: absolute;
@@ -65,7 +65,7 @@ body {
   top: 0;
   bottom: 0;
   width: 0; /* Retirada a largura */
-  background-color: transparent; /* Retirada a cor */
+  background-color: transparent;
   z-index: -1;
 }
 
@@ -96,7 +96,7 @@ body {
   position: relative;
 }
 
-/* Círculos removidos conforme solicitado */
+/* Círculos removidos */
 .phase-title::before {
   display: none;
 }
