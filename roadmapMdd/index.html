@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap: Model-Driven Development</title>
+    <style>
+      :root {
+        --cor-primaria: #002575;
+        --cor-secundaria: #000000;
+        --cor-destaque: #008d0c;
+        --cor-fundo: #f1f5f9;
+        --cor-branco: #ffffff;
+        --cor-texto-escuro: #1e293b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto-escuro);
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .conteiner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--cor-primaria);
+        margin-bottom: 10px;
+      }
+
+      .grade-roadmap {
+        display: grid;
+        gap: 20px;
+      }
+
+      .cartao {
+        background: var(--cor-branco);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .cabecalho-cartao {
+        padding: 24px;
+        background: var(--cor-branco);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cabecalho-cartao h2 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .cabecalho-cartao:hover {
+        background: #f8fafc;
+      }
+
+      .seta {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        color: var(--cor-secundaria);
+      }
+
+      .conteudo-cartao {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        background: #fafafa;
+      }
+
+      .ativo .conteudo-cartao {
+        max-height: 3000px;
+        border-top: 1px solid #e2e8f0;
+      }
+      .ativo .seta {
+        transform: rotate(180deg);
+      }
+
+      .lista-topicos {
+        list-style: none;
+        padding: 20px;
+      }
+
+      .item-topico {
+        padding: 15px;
+        background: white;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid var(--cor-destaque);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .titulo-topico {
+        font-weight: bold;
+        display: block;
+        color: var(--cor-primaria);
+        margin-bottom: 4px;
+      }
+      .descricao-topico {
+        font-size: 1rem;
+        color: var(--cor-secundaria);
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <h1>Curso de Model-Driven Development</h1>
+        <p>
+          Desenvolvimento Orientado a Modelos e Criação de Linguagens com
+          Langium
+        </p>
+      </header>
+
+      <div class="grade-roadmap">
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📋 Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">⚠️ Avisos</span>
+                <p class="descricao-topico">
+                  Orientações iniciais sobre a configuração do ambiente e
+                  materiais complementares.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📚 Visão Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">🧩 Fundamentos do MDD</span>
+                <p class="descricao-topico">
+                  Princípios, funcionamento, vantagens e comparação com
+                  abordagens tradicionais.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🏗️ Aplicação e Conclusão</span>
+                <p class="descricao-topico">
+                  Exemplos práticos de onde o MDD brilha e fechamento da
+                  introdução teórica.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 TypeScript para Langium</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">1. Instalando TypeScript 🛠️</span>
+                <p class="descricao-topico">
+                  Configuração do ambiente de desenvolvimento e compilador
+                  (tsc).
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >2. Conceitos de POO e Tipagem 🛡️</span
+                >
+                <p class="descricao-topico">
+                  Classes, Interfaces e o sistema de tipos estáticos do TS.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">3. Generics no TypeScript 🧬</span>
+                <p class="descricao-topico">
+                  Como criar componentes reutilizáveis e flexíveis com tipos
+                  genéricos.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Trilha Básica</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">1. Setup e Geradores ⚙️</span>
+                <p class="descricao-topico">
+                  Instalação do Yeoman e do gerador Langium para estruturar o
+                  projeto.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">2. Estrutura e Gramática 🏗️</span>
+                <p class="descricao-topico">
+                  Entendendo os arquivos gerados e definindo a gramática da sua
+                  linguagem.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">3. Compilação e Execução ⚡</span>
+                <p class="descricao-topico">
+                  Gerando código a partir da gramática e testando a nova
+                  linguagem na prática.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Trilha Intermediária</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">1. Fundamentos de BNF 📝</span>
+                <p class="descricao-topico">
+                  Aprendendo a notação Backus-Naur para definição formal de
+                  linguagens.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >2. Criação Avançada de Gramáticas 🧪</span
+                >
+                <p class="descricao-topico">
+                  Desenvolvimento de uma nova gramática e lógica de geração de
+                  código customizada.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">3. Desafio Final 🏁</span>
+                <p class="descricao-topico">
+                  Aplicação prática dos conceitos para criar um DSL
+                  (Domain-Specific Language) funcional.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🎓 Certificação do Curso</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >📜 Certificado de Conclusão do Model-Driven Development</span
+                >
+                <p class="descricao-topico">
+                  Reconhecimento oficial pela conclusão do curso de Model-Driven
+                  Development.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cabecalhos = document.querySelectorAll(".cabecalho-cartao");
+      cabecalhos.forEach((cabecalho) => {
+        cabecalho.addEventListener("click", () => {
+          const cartao = cabecalho.parentElement;
+          cartao.classList.toggle("ativo");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Código do botão do Roadmap -->
+<!-- <a href="https://leds.academy/local/roadmaps/roadmap-devops" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Ver Roadmap →</a> -->

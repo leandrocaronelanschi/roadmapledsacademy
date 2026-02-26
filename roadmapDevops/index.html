@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap: Curso de DevOps</title>
+    <style>
+      :root {
+        --cor-primaria: #002575;
+        --cor-secundaria: #000000;
+        --cor-destaque: #008d0c;
+        --cor-fundo: #f1f5f9;
+        --cor-branco: #ffffff;
+        --cor-texto-escuro: #1e293b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto-escuro);
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .conteiner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--cor-primaria);
+        margin-bottom: 10px;
+      }
+
+      .grade-roadmap {
+        display: grid;
+        gap: 20px;
+      }
+
+      .cartao {
+        background: var(--cor-branco);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .cabecalho-cartao {
+        padding: 24px;
+        background: var(--cor-branco);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cabecalho-cartao h2 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .cabecalho-cartao:hover {
+        background: #f8fafc;
+      }
+
+      .seta {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        color: var(--cor-secundaria);
+      }
+
+      .conteudo-cartao {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        background: #fafafa;
+      }
+
+      .ativo .conteudo-cartao {
+        max-height: 2000px;
+        border-top: 1px solid #e2e8f0;
+      }
+      .ativo .seta {
+        transform: rotate(180deg);
+      }
+
+      .lista-topicos {
+        list-style: none;
+        padding: 20px;
+      }
+
+      .item-topico {
+        padding: 15px;
+        background: white;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid var(--cor-destaque);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .titulo-topico {
+        font-weight: bold;
+        display: block;
+        color: var(--cor-primaria);
+        margin-bottom: 4px;
+      }
+      .descricao-topico {
+        font-size: 1rem;
+        color: var(--cor-secundaria);
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <h1>Curso de DevOps</h1>
+        <p>Automação, Cultura Ágil e CI/CD com GitHub Actions</p>
+      </header>
+
+      <div class="grade-roadmap">
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📋 Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">⚠️ Avisos</span>
+                <p class="descricao-topico">
+                  Informações importantes sobre a jornada de aprendizado e
+                  suporte ao aluno.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📚 Visão Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">🤝 O que é DevOps?</span>
+                <p class="descricao-topico">
+                  Um composto de Dev (desenvolvimento) e Ops (operações) focado
+                  em colaboração e automação.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Trilha CI/CD com Github Action</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">1. 📌 Pré-Requisitos</span>
+                <p class="descricao-topico">
+                  Preparação do ambiente e ferramentas necessárias para
+                  automação.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >2. Desenvolvimento e Linha de Comando ⌨️</span
+                >
+                <p class="descricao-topico">
+                  Fundamentos essenciais de terminais e scripts para rotinas
+                  automatizadas.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >3. Conceitos de DevOps e CI/CD 🔄</span
+                >
+                <p class="descricao-topico">
+                  Entenda o fluxo de Integração Contínua e Entrega Contínua na
+                  prática.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >4. Docker e Containers (Opcional) 🐳</span
+                >
+                <p class="descricao-topico">
+                  Isolamento de ambientes e empacotamento de aplicações para
+                  deploy consistente.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🛠️ Fundamentos de CI/CD e GitHub Actions</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">1. O que é CI/CD? 🏗️</span>
+                <p class="descricao-topico">
+                  Aprofundamento na teoria e nos pilares da automação de
+                  software moderna.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >2. Construção de Workflows (CI) ⛓️</span
+                >
+                <p class="descricao-topico">
+                  Como escrever arquivos YAML para automatizar builds e testes
+                  no GitHub.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">3. Desafio Final 🏁</span>
+                <p class="descricao-topico">
+                  Implementação de um pipeline completo de CI/CD para uma
+                  aplicação real.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🎓 Certificação do Curso</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >📜 Certificado de Conclusão do Curso de DevOps</span
+                >
+                <p class="descricao-topico">
+                  Reconhecimento oficial pela maestria em cultura e ferramentas
+                  DevOps.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cabecalhos = document.querySelectorAll(".cabecalho-cartao");
+      cabecalhos.forEach((cabecalho) => {
+        cabecalho.addEventListener("click", () => {
+          const cartao = cabecalho.parentElement;
+          cartao.classList.toggle("ativo");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Código do botão do Roadmap -->
+<!-- <a href="https://leds.academy/local/roadmaps/roadmap-model-driven-development" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Ver Roadmap →</a> -->

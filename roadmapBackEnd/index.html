@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap: Desenvolvimento Backend C#</title>
+    <style>
+      :root {
+        --cor-primaria: #002575;
+        --cor-secundaria: #000000;
+        --cor-destaque: #008d0c;
+        --cor-fundo: #f1f5f9;
+        --cor-branco: #ffffff;
+        --cor-texto-escuro: #1e293b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto-escuro);
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .conteiner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--cor-primaria);
+        margin-bottom: 10px;
+      }
+
+      .grade-roadmap {
+        display: grid;
+        gap: 20px;
+      }
+
+      .cartao {
+        background: var(--cor-branco);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .cabecalho-cartao {
+        padding: 24px;
+        background: var(--cor-branco);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cabecalho-cartao h2 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .cabecalho-cartao:hover {
+        background: #f8fafc;
+      }
+
+      .seta {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        color: var(--cor-secundaria);
+      }
+
+      .conteudo-cartao {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        background: #fafafa;
+      }
+
+      .ativo .conteudo-cartao {
+        max-height: 4000px;
+        border-top: 1px solid #e2e8f0;
+      }
+      .ativo .seta {
+        transform: rotate(180deg);
+      }
+
+      .lista-topicos {
+        list-style: none;
+        padding: 20px;
+      }
+
+      .item-topico {
+        padding: 15px;
+        background: white;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid var(--cor-destaque);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .titulo-topico {
+        font-weight: bold;
+        display: block;
+        color: var(--cor-primaria);
+        margin-bottom: 4px;
+      }
+      .descricao-topico {
+        font-size: 1rem;
+        color: var(--cor-secundaria);
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <h1>Curso de Desenvolvimento Backend</h1>
+        <p>Especialização em C#, .NET e Clean Architecture</p>
+      </header>
+
+      <div class="grade-roadmap">
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📋 Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">⚠️ Avisos</span>
+                <p class="descricao-topico">
+                  Orientações sobre o ambiente de desenvolvimento e cronograma
+                  de estudos.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">📚 Visão Geral</span>
+                <p class="descricao-topico">
+                  Introdução aos conceitos de Backend e o papel do desenvolvedor
+                  C# no mercado.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Trilha de Backend com C#</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">1. GIT e GitHub (2:30h) 🐙</span>
+                <p class="descricao-topico">
+                  Controle de versão, ramificações e colaboração em repositórios
+                  remotos.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">2. Introdução ao C# (4h) ⌨️</span>
+                <p class="descricao-topico">
+                  Sintaxe básica, tipos de dados, operadores e estruturas de
+                  controle.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >3. Programação Orientada a Objetos (3h) 🏛️</span
+                >
+                <p class="descricao-topico">
+                  Classes, Herança, Polimorfismo, Encapsulamento e Abstração em
+                  C#.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >4. Programação Assíncrona (1h) ⚡</span
+                >
+                <p class="descricao-topico">
+                  Uso de async/await para garantir a escalabilidade da
+                  aplicação.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >5. Injeção de Dependência (45min) 💉</span
+                >
+                <p class="descricao-topico">
+                  Desacoplamento de código e inversão de controle no .NET.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >6. Docker e Docker-Compose (2h) 🐳</span
+                >
+                <p class="descricao-topico">
+                  Containerização de aplicações e orquestração de serviços.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >7. Introdução ao .NET (2:15h) 🔷</span
+                >
+                <p class="descricao-topico">
+                  Conhecendo o ecossistema e as ferramentas da plataforma .NET.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >8. Clean Architecture (3:45h) 🏗️</span
+                >
+                <p class="descricao-topico">
+                  Organização de projetos seguindo princípios de separação de
+                  interesses.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >9. Testes no Ambiente .NET (2:30h) 🧪</span
+                >
+                <p class="descricao-topico">
+                  Testes unitários e de integração para garantir a qualidade do
+                  código.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >10. Tutorial de CRUD Básico (3h) 📝</span
+                >
+                <p class="descricao-topico">
+                  Criação de uma Web API funcional para operações básicas de
+                  dados.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">11. Desafio Final 🏁</span>
+                <p class="descricao-topico">
+                  Projeto prático integrando todos os conhecimentos da trilha.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📌 CRUD com C# e CQRS</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🔄 Integração CQRS + Clean Architecture</span
+                >
+                <p class="descricao-topico">
+                  Separação entre comandos de escrita e consultas de leitura.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🔎 Recapitulando e Visão Geral</span
+                >
+                <p class="descricao-topico">
+                  Revisão dos conceitos e arquitetura da API que será
+                  construída.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🛠️ Passo a Passo do CRUD</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >Passo 1 & 2: Projeto e Domain 🌍</span
+                >
+                <p class="descricao-topico">
+                  Criação da solução e definição das entidades e regras de
+                  negócio.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >Passo 3 & 4: Infrastructure e Application ⚙️</span
+                >
+                <p class="descricao-topico">
+                  Implementação de persistência de dados e lógica de aplicação
+                  (Handlers).
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >Passo 5: Presentation e Referências 🖥️</span
+                >
+                <p class="descricao-topico">
+                  Exposição dos endpoints via API e documentação técnica.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🎓 Certificação do Curso</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >📜 Certificado de Conclusão de Desenvolvimento Backend</span
+                >
+                <p class="descricao-topico">
+                  Validação das competências como Desenvolvedor Backend .NET.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cabecalhos = document.querySelectorAll(".cabecalho-cartao");
+      cabecalhos.forEach((cabecalho) => {
+        cabecalho.addEventListener("click", () => {
+          const cartao = cabecalho.parentElement;
+          cartao.classList.toggle("ativo");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Código do botão do Roadmap -->
+<!-- <a href="https://leds.academy/local/roadmaps/roadmap-desenvolvimento-backend" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Ver Roadmap →</a> -->

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap Interativo de IA</title>
+    <style>
+      :root {
+        --cor-primaria: #002575;
+        --cor-secundaria: #000000;
+        --cor-destaque: #008d0c;
+        --cor-fundo: #f1f5f9;
+        --cor-branco: #ffffff;
+        --cor-texto-escuro: #1e293b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto-escuro);
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .conteiner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+        font-size: 1.2rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--cor-primaria);
+        margin-bottom: 10px;
+      }
+
+      /* Estrutura do Roadmap */
+      .grade-roadmap {
+        display: grid;
+        gap: 20px;
+      }
+
+      .cartao {
+        background: var(--cor-branco);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .cabecalho-cartao {
+        padding: 24px;
+        background: var(--cor-branco);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cabecalho-cartao h2 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .cabecalho-cartao:hover {
+        background: #f8fafc;
+      }
+
+      .seta {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        color: var(--cor-secundaria);
+      }
+
+      /* Conteúdo Expansível */
+      .conteudo-cartao {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        background: #fafafa;
+      }
+
+      .ativo .conteudo-cartao {
+        max-height: 1500px;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      .ativo .seta {
+        transform: rotate(180deg);
+      }
+
+      .lista-topicos {
+        list-style: none;
+        padding: 20px;
+      }
+
+      .item-topico {
+        padding: 15px;
+        background: white;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid var(--cor-destaque);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .titulo-topico {
+        font-weight: bold;
+        display: block;
+        color: var(--cor-primaria);
+        margin-bottom: 4px;
+      }
+
+      .descricao-topico {
+        font-size: 0.9rem;
+        color: var(--cor-secundaria);
+        font-size: 1rem;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <h1>Curso de Inteligência Artificial (IA)</h1>
+        <p>Do básico aos Agentes Autônomos e Automação Profissional</p>
+      </header>
+
+      <div class="grade-roadmap">
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📚 Visão Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">Avisos</span>
+                <p class="descricao-topico">
+                  Informações importantes sobre a dinâmica do curso, suporte e
+                  materiais complementares.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">📚 Visão Geral</span>
+                <p class="descricao-topico">
+                  Introdução ao mundo da IA, definindo o que são sistemas
+                  inteligentes e agentes.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 IA com Agentes</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >1. Visão geral sobre Agentes e CrewAI</span
+                >
+                <p class="descricao-topico">
+                  Entenda como o framework CrewAI orquestra múltiplos agentes
+                  para tarefas complexas.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >2. Introdução de como criar agentes com CrewAI</span
+                >
+                <p class="descricao-topico">
+                  Mão na massa: configurando seu primeiro agente com funções e
+                  ferramentas específicas.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >3. Aspectos Avançados de como criar agentes com CrewAI</span
+                >
+                <p class="descricao-topico">
+                  Processos sequenciais, hierárquicos e delegação de tarefas
+                  entre IAs.
+                </p>
+              </li>
+              <li class="topic-item">
+                <span class="titulo-topico">4. Engenharia de Prompt</span>
+                <p class="descricao-topico">
+                  A arte de escrever instruções precisas para garantir que o
+                  agente não alucine.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >5. Exemplo de projeto com CrewAI e Ollama</span
+                >
+                <p class="descricao-topico">
+                  Como rodar modelos de linguagem (LLMs) localmente para total
+                  privacidade e baixo custo.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">6. Desafio</span>
+                <p class="descricao-topico">
+                  Aplicação prática para consolidar todo o conhecimento sobre
+                  agentes autônomos.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🤖 Integração entre N8N e Open WebUI</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🤖 Integração entre N8N e Open WebUI</span
+                >
+                <p class="descricao-topico">
+                  Conecte o cérebro da automação (N8N) à melhor interface de
+                  chat (Open WebUI).
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">⚙️ O que é o N8N?</span>
+                <p class="descricao-topico">
+                  Exploração da ferramenta low-code que permite criar fluxos de
+                  trabalho inteligentes.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🔁 Integração: N8N + Open WebUI</span
+                >
+                <p class="descricao-topico">
+                  Configurando Webhooks e Pipes para uma comunicação fluida
+                  entre sistemas.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🧠 Desafio: IA Resumidora de Repositórios GitHub</span
+                >
+                <p class="descricao-topico">
+                  Projeto final: Criar uma automação que lê códigos do GitHub e
+                  gera relatórios automáticos.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🎓 Certificação do Curso</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >Certificado de Conclusão de Curso</span
+                >
+                <p class="descricao-topico">
+                  Reconhecimento oficial pela conclusão de todos os módulos e
+                  desafios práticos.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Seleciona todos os cabeçalhos de cartão
+      const cabecalhos = document.querySelectorAll(".cabecalho-cartao");
+
+      cabecalhos.forEach((cabecalho) => {
+        cabecalho.addEventListener("click", () => {
+          const cartao = cabecalho.parentElement;
+
+          // Alterna a classe 'ativo' no cartão clicado
+          cartao.classList.toggle("ativo");
+        });
+      });
+    </script>
+  </body>
+</html>

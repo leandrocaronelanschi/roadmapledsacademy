@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap: Gestão de Projetos</title>
+    <style>
+      :root {
+        --cor-primaria: #002575;
+        --cor-secundaria: #000000;
+        --cor-destaque: #008d0c;
+        --cor-fundo: #f1f5f9;
+        --cor-branco: #ffffff;
+        --cor-texto-escuro: #1e293b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto-escuro);
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .conteiner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--cor-primaria);
+        margin-bottom: 10px;
+      }
+
+      .grade-roadmap {
+        display: grid;
+        gap: 20px;
+      }
+
+      .cartao {
+        background: var(--cor-branco);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .cabecalho-cartao {
+        padding: 24px;
+        background: var(--cor-branco);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cabecalho-cartao h2 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .cabecalho-cartao:hover {
+        background: #f8fafc;
+      }
+
+      .seta {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        color: var(--cor-secundaria);
+      }
+
+      .conteudo-cartao {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        background: #fafafa;
+      }
+
+      .ativo .conteudo-cartao {
+        max-height: 3000px;
+        border-top: 1px solid #e2e8f0;
+      }
+      .ativo .seta {
+        transform: rotate(180deg);
+      }
+
+      .lista-topicos {
+        list-style: none;
+        padding: 20px;
+      }
+
+      .item-topico {
+        padding: 15px;
+        background: white;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid var(--cor-destaque);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .titulo-topico {
+        font-weight: bold;
+        display: block;
+        color: var(--cor-primaria);
+        margin-bottom: 4px;
+      }
+      .descricao-topico {
+        font-size: 1rem;
+        color: var(--cor-secundaria);
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <h1>Curso de Gestão de Projetos</h1>
+        <p>Organização, Metodologias Ágeis e Estruturas de Trabalho</p>
+      </header>
+
+      <div class="grade-roadmap">
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📋 Visão Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">📢 Geral e Avisos</span>
+                <p class="descricao-topico">
+                  Informações iniciais e orientações sobre o cronograma do
+                  curso.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🔭 Introdução</span>
+                <p class="descricao-topico">
+                  Uma visão panorâmica sobre o que será abordado na gestão de
+                  projetos.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Gestão com Github Project</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">📚 Gestão de Tarefas e Regras</span>
+                <p class="descricao-topico">
+                  Como utilizar o GitHub Projects e as Regras Gerais para
+                  organização.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🧩 Issues e Categorias</span>
+                <p class="descricao-topico">
+                  Entendendo Categorias, Campos Customizados e Templates de
+                  Issues.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🧭 Planejamento: Sprints e Milestones</span
+                >
+                <p class="descricao-topico">
+                  🛠️ Como criar e combinar Sprints com Milestones para entregas
+                  contínuas.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🎯 Produto e Board</span>
+                <p class="descricao-topico">
+                  🚀 Criando Boards e filtrando Issues de tipo "Product" para
+                  gestão visual.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🏝️ Template e Conclusão</span>
+                <p class="descricao-topico">
+                  🛠️ Finalização do módulo de ferramentas e uso de templates
+                  prontos.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>👥 Papéis em Projeto Ágil</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">👑 Liderança Ágil</span>
+                <p class="descricao-topico">
+                  As responsabilidades do Product Owner, Scrum Master e Chief
+                  Scrum Master.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">💻 Times de Entrega</span>
+                <p class="descricao-topico">
+                  O papel dos Times de Desenvolvimento, Design e DevOps no fluxo
+                  ágil.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🏗️ Tipos de Equipe</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">📐 Modelos de Squads</span>
+                <p class="descricao-topico">
+                  Diferenças entre Platform Team, Enabling Team e Stream-aligned
+                  Team.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">📊 Comparação</span>
+                <p class="descricao-topico">
+                  Análise das vantagens de cada modelo de equipe para diferentes
+                  projetos.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📚 Design Structure Matrix I</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >📌 O que você encontrará aqui?</span
+                >
+                <p class="descricao-topico">
+                  🎯 Indicações, Pré-requisitos e os Benefícios da DSM na
+                  prática.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🧭 Conclusão da Teoria</span>
+                <p class="descricao-topico">
+                  Fechamento dos fundamentos teóricos da matriz de dependências.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Design Structure Matrix II</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">🧩 Etapa 1: Estrutura</span>
+                <p class="descricao-topico">
+                  Definição de Feature, Task e Bug dentro da matriz.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🧠 Etapa 2: Construção</span>
+                <p class="descricao-topico">
+                  Como montar a DSM em casos sem ciclos (lineares).
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🔁 Etapa 3: Ciclos</span>
+                <p class="descricao-topico">
+                  Gerenciamento de loops e dependências circulares na DSM.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🎓 Certificação do Curso</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >📜 Certificado do Curso de Gestão de Projetos</span
+                >
+                <p class="descricao-topico">
+                  Emissão do documento após a conclusão de todos os desafios.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cabecalhos = document.querySelectorAll(".cabecalho-cartao");
+      cabecalhos.forEach((cabecalho) => {
+        cabecalho.addEventListener("click", () => {
+          const cartao = cabecalho.parentElement;
+          cartao.classList.toggle("ativo");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Código do botão do Roadmap -->
+<!-- <a href="https://leds.academy/local/roadmaps/roadmap-gestao-projetos" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Ver Roadmap →</a> -->

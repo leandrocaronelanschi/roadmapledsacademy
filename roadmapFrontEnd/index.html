@@ -1,0 +1,372 @@
+Para manter a padronização com os códigos anteriores e garantir que seu curso de
+Vue.js fique profissional, estruturei o roadmap com a largura de 1200px, ícones
+em todos os tópicos e descrições breves. Como você está estudando Análise e
+Desenvolvimento de Sistemas, este layout já reflete a estrutura de componentes
+que você encontrará no mercado. HTML
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap: Desenvolvimento Frontend com Vue</title>
+    <style>
+      :root {
+        --cor-primaria: #002575;
+        --cor-secundaria: #000000;
+        --cor-destaque: #008d0c;
+        --cor-fundo: #f1f5f9;
+        --cor-branco: #ffffff;
+        --cor-texto-escuro: #1e293b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto-escuro);
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .conteiner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--cor-primaria);
+        margin-bottom: 10px;
+      }
+
+      .grade-roadmap {
+        display: grid;
+        gap: 20px;
+      }
+
+      .cartao {
+        background: var(--cor-branco);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .cabecalho-cartao {
+        padding: 24px;
+        background: var(--cor-branco);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cabecalho-cartao h2 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .cabecalho-cartao:hover {
+        background: #f8fafc;
+      }
+
+      .seta {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        color: var(--cor-secundaria);
+      }
+
+      .conteudo-cartao {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        background: #fafafa;
+      }
+
+      .ativo .conteudo-cartao {
+        max-height: 4000px;
+        border-top: 1px solid #e2e8f0;
+      }
+      .ativo .seta {
+        transform: rotate(180deg);
+      }
+
+      .lista-topicos {
+        list-style: none;
+        padding: 20px;
+      }
+
+      .item-topico {
+        padding: 15px;
+        background: white;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid var(--cor-destaque);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .titulo-topico {
+        font-weight: bold;
+        display: block;
+        color: var(--cor-primaria);
+        margin-bottom: 4px;
+      }
+      .descricao-topico {
+        font-size: 1rem;
+        color: var(--cor-secundaria);
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <h1>Curso de Desenvolvimento Frontend com Vue</h1>
+        <p>Do conceito ao projeto escalável com Vue.js e Vuetify</p>
+      </header>
+
+      <div class="grade-roadmap">
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📋 Visão Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">⚙️ Geral e Avisos</span>
+                <p class="descricao-topico">
+                  Informações cruciais sobre a metodologia e avisos importantes
+                  para o início da jornada.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">📚 Visão Geral do Framework</span>
+                <p class="descricao-topico">
+                  Entenda o que torna o Vue.js um framework progressivo e suas
+                  principais características.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Trilha de Frontend com Vue</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">1. Introdução ao Vue.js (3h)</span>
+                <p class="descricao-topico">
+                  📦 Reatividade, diretivas e a instância do Vue.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >2. Arquitetura de Projetos (2h)</span
+                >
+                <p class="descricao-topico">
+                  🏗️ Organização de pastas, padrão SFC (Single File Components)
+                  e roteamento.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >3. Vuetify: Interface de Usuário (50 min)</span
+                >
+                <p class="descricao-topico">
+                  🎨 Criando interfaces modernas com Material Design e
+                  componentes prontos.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >4. Boas Práticas com TypeScript (1:20h)</span
+                >
+                <p class="descricao-topico">
+                  🛡️ Adicionando tipagem forte para evitar erros comuns e
+                  melhorar o IntelliSense.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >5. Gerenciamento de Estado e APIs (2:30h)</span
+                >
+                <p class="descricao-topico">
+                  🔄 Uso de Pinia ou Vuex e integração com Axios para consumo de
+                  dados externos.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >6. Componentização e Reuso (1:15h)</span
+                >
+                <p class="descricao-topico">
+                  🧩 Criação de componentes genéricos, Props, Emits e Slots.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >7. Desempenho e Otimização (1:50h)</span
+                >
+                <p class="descricao-topico">
+                  ⚡ Lazy loading, otimização do bundle e ciclo de vida
+                  avançado.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">8. Testes e Qualidade (2:45h)</span>
+                <p class="descricao-topico">
+                  🧪 Testes unitários com Vitest e E2E para garantir a
+                  estabilidade da aplicação.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🏁 Desafio Prático</span>
+                <p class="descricao-topico">
+                  Aplicação de todos os conceitos em um projeto real de ponta a
+                  ponta.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📌 CRUD com Vue</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >📜 Pré-requisitos e Ferramentas ⛏️</span
+                >
+                <p class="descricao-topico">
+                  Preparação do ambiente: Node.js, NPM/Yarn e VS Code
+                  extensions.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🦝 Padrões de Projeto e Divisão 🗂️</span
+                >
+                <p class="descricao-topico">
+                  Organização modular: Modelos, Repositórios e Controllers.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >👣 Passo a Passo do Desenvolvimento</span
+                >
+                <p class="descricao-topico">
+                  Desde a definição da 🏛️ Model até a criação da 🖥️ View final.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">🤝 Créditos e Networking</span>
+                <p class="descricao-topico">
+                  🔗 LinkedIn dos criadores do conteúdo.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📑 Manual de Boas Práticas - Frontend</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🏗️ Estrutura e Arquitetura Modular</span
+                >
+                <p class="descricao-topico">
+                  Como manter o código limpo e escalável utilizando separação de
+                  responsabilidades.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >📐 Padrões de Código e Tipagem</span
+                >
+                <p class="descricao-topico">
+                  Uso correto do TypeScript e padrões de nomenclatura (clean
+                  code).
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🔄 Versionamento e Documentação 📝</span
+                >
+                <p class="descricao-topico">
+                  Fluxo de colaboração Git, Conventional Commits e documentação
+                  técnica.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🎓 Certificação do Curso</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >📜 Certificado do Curso de Frontend</span
+                >
+                <p class="descricao-topico">
+                  Validação das competências em Vue.js para o mercado de
+                  trabalho.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cabecalhos = document.querySelectorAll(".cabecalho-cartao");
+      cabecalhos.forEach((cabecalho) => {
+        cabecalho.addEventListener("click", () => {
+          const cartao = cabecalho.parentElement;
+          cartao.classList.toggle("ativo");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Código do botão do Roadmap -->
+<!-- <a href="https://leds.academy/local/roadmaps/roadmap-front-end-Vue" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Ver Roadmap →</a> -->

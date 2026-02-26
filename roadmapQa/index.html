@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap Interativo de QA</title>
+    <style>
+      :root {
+        --cor-primaria: #002575;
+        --cor-secundaria: #000000;
+        --cor-destaque: #008d0c;
+        --cor-fundo: #f1f5f9;
+        --cor-branco: #ffffff;
+        --cor-texto-escuro: #1e293b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--cor-fundo);
+        color: var(--cor-texto-escuro);
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      .conteiner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: var(--cor-primaria);
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.1rem;
+        color: var(--cor-secundaria);
+      }
+
+      .grade-roadmap {
+        display: grid;
+        gap: 20px;
+      }
+
+      .cartao {
+        background: var(--cor-branco);
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .cabecalho-cartao {
+        padding: 24px;
+        background: var(--cor-branco);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cabecalho-cartao h2 {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .cabecalho-cartao:hover {
+        background: #f8fafc;
+      }
+
+      .seta {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        color: var(--cor-secundaria);
+      }
+
+      .conteudo-cartao {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        background: #fafafa;
+      }
+
+      .ativo .conteudo-cartao {
+        max-height: 2000px; /* Ajustado para conteúdos longos */
+        border-top: 1px solid #e2e8f0;
+      }
+
+      .ativo .seta {
+        transform: rotate(180deg);
+      }
+
+      .lista-topicos {
+        list-style: none;
+        padding: 20px;
+      }
+
+      .item-topico {
+        padding: 15px;
+        background: white;
+        margin-bottom: 12px;
+        border-radius: 8px;
+        border-left: 4px solid var(--cor-destaque);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .titulo-topico {
+        font-weight: bold;
+        display: block;
+        color: var(--cor-primaria);
+        margin-bottom: 4px;
+      }
+
+      .descricao-topico {
+        font-size: 1rem;
+        color: var(--cor-secundaria);
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <h1>Curso de Quality Assurance (QA)</h1>
+        <p>Garantia de Qualidade e Automação de Testes</p>
+      </header>
+
+      <div class="grade-roadmap">
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>📚 Visão Geral</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">Perfil do QA</span>
+                <p class="descricao-topico">
+                  Entenda as competências, responsabilidades e a importância do
+                  analista de QA no ciclo de vida do software.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">Avisos</span>
+                <p class="descricao-topico">
+                  Orientações gerais sobre o curso, cronograma e utilização das
+                  ferramentas.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Trilha para Iniciantes</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">O que você vai aprender?</span>
+                <p class="descricao-topico">
+                  Uma introdução aos objetivos da trilha e o roteiro para se
+                  tornar um testador júnior.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >1. Fundamentos de QA e Testes de Software (2h)</span
+                >
+                <p class="descricao-topico">
+                  Tipos de testes, níveis de teste (unitário, integração,
+                  sistema) e a pirâmide de testes.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">2. Testes Manuais (2h30min)</span>
+                <p class="descricao-topico">
+                  Execução de casos de teste, escrita de cenários e técnicas de
+                  teste exploratório.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >3. Conceitos Básicos de HTML, CSS e JavaScript (3h)</span
+                >
+                <p class="descricao-topico">
+                  Base necessária para identificar seletores e entender o
+                  comportamento de aplicações web.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >4. Boas Práticas de Relatórios e Registro de Bugs
+                  (30min)</span
+                >
+                <p class="descricao-topico">
+                  Como reportar falhas de forma clara, objetiva e reproduzível
+                  para o time de desenvolvimento.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico">Introdução ao Cypress (3h)</span>
+                <p class="descricao-topico">
+                  Primeiros passos com o framework Cypress para automação de
+                  testes E2E.
+                </p>
+              </li>
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >🎯 Boas práticas em automação de testes com Cypress</span
+                >
+                <p class="descricao-topico">
+                  Padrões de projeto, comandos customizados e organização de
+                  suítes de teste.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🚀 Trilha para Intermediários</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico">Trilha Intermediária</span>
+                <p class="descricao-topico">
+                  Aprofundamento em automação, testes de API e integração
+                  contínua (CI/CD).
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cartao">
+          <div class="cabecalho-cartao">
+            <h2>🎓 Certificação do Curso</h2>
+            <span class="seta">▼</span>
+          </div>
+          <div class="conteudo-cartao">
+            <ul class="lista-topicos">
+              <li class="item-topico">
+                <span class="titulo-topico"
+                  >Certificado de Conclusão do Curso de Quality Assurance</span
+                >
+                <p class="descricao-topico">
+                  Documento oficial validando suas habilidades em testes manuais
+                  e automatizados.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cabecalhos = document.querySelectorAll(".cabecalho-cartao");
+
+      cabecalhos.forEach((cabecalho) => {
+        cabecalho.addEventListener("click", () => {
+          const cartao = cabecalho.parentElement;
+          cartao.classList.toggle("ativo");
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- <a href="https://leds.academy/local/roadmaps/roadmap-qa" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Ver Roadmap →</a> -->
